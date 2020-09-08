@@ -1,6 +1,7 @@
 {
  "HELLO"        : "Bonjour",
  "_NETEASE_MUSIC": "Netease",
+ "_NETEASE_MUSIC_PLAYLIST": "Netease Playlist",
  "_QQ_MUSIC": "QQ",
  "_XIAMI_MUSIC": "Xiami",
  "_KUGOU_MUSIC": "Kugou",
@@ -22,6 +23,8 @@
  "_IMPORT_PLAYLIST": "Importer la Playlist",
  "_ORIGIN_LINK": "Lien original",
  "_SONGS": "Musiques",
+ "_SONGS_COUNT": "Nombre de Musiques",
+ "_AUTHOR":"Auteur",
  "_ARTISTS": "Artistes",
  "_ALBUMS": "Albums",
  "_OPERATION": "Outils",

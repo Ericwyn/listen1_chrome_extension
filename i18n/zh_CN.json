@@ -1,6 +1,7 @@
 {
  "HELLO"        : "你好",
  "_NETEASE_MUSIC": "网易云音乐",
+ "_NETEASE_MUSIC_PLAYLIST": "网易云音乐歌单",
  "_QQ_MUSIC": "QQ音乐",
  "_XIAMI_MUSIC": "虾米音乐",
  "_KUGOU_MUSIC": "酷狗音乐",
@@ -22,6 +23,8 @@
  "_IMPORT_PLAYLIST": "导入歌单",
  "_ORIGIN_LINK": "链接",
  "_SONGS": "歌曲名",
+ "_SONGS_COUNT": "歌曲数量",
+ "_AUTHOR":"作者",
  "_ARTISTS": "歌手",
  "_ALBUMS": "专辑名",
  "_OPERATION": "操作",

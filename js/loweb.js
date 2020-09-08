@@ -18,13 +18,15 @@ function getProviderByName(sourceName) {
       return bilibili;
     case 'migu':
       return migu;
+    case 'netease_playlist':
+      return netease_playlist;
     default:
       return null;
   }
 }
 
 function getAllProviders() {
-  return [netease, xiami, qq, kugou, kuwo, bilibili, migu];
+  return [netease, xiami, qq, kugou, kuwo, bilibili, migu, netease_playlist];
 }
 
 function getProviderByItemId(itemId) {
@@ -159,9 +161,11 @@ ngloWebManager.factory('loWeb', ['$rootScope', '$log', '$http', '$httpParamSeria
         const providers = getAllProviders();
         let result = undefined;
         providers.forEach((provider)=>{
-          let r = provider.parse_url(url);
-          if (r !== undefined) {
-            result = r;
+          if(provider.parse_url != undefined){
+            let r = provider.parse_url(url);
+            if (r !== undefined) {
+              result = r;
+            }
           }
         });
         return {

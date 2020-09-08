@@ -119,6 +119,9 @@ const main = () => {
     if (sourceId === 7) {
       return 'migu';
     }
+    if (sourceId === 8) {
+      return 'netease_playlist';
+    }
     return '';
   }
 
@@ -1420,6 +1423,10 @@ const main = () => {
 
       $scope.isActiveTab = tab => ($scope.tab === tab);
 
+      $scope.isPlayListSearch = tab => (
+        $scope.tab === 8
+      );
+
       function renderSearchPage(){
         updateCurrentPage(-1);
         updateTotalPage(-1);
@@ -1506,7 +1513,7 @@ const main = () => {
     link(scope, element, attrs) {
       element.bind('click', (event) => {
         angularPlayer.addTrack(scope.song);
-        angularPlayer.playTrack(scope.song.id);
+        angularPlayer.playTrack(scope.song.id);  
       });
     },
   })]);
