@@ -6578,6 +6578,12 @@ ngSoundManager.factory('angularPlayer', ['$rootScope', '$log',
                 $rootScope.$broadcast('player:playlist', playlist);
             },
             initPlayTrack: function(trackId, isResume, isloadOnly, successCallback, failCallback) {
+                // Send songs message to main thread for electron
+                if (typeof chrome === 'undefined') {
+                  let track = this.getTrack(trackId);
+                  const { ipcRenderer } = require('electron');
+                  ipcRenderer.send('trackPlayingNow', track);
+                }
                 if(isResume !== true) {
                     //stop and unload currently playing track
                     this.stop();
